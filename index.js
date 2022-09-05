@@ -5,6 +5,7 @@ const path = require("path");
 const generateMarkdown = require('./utils/generateMarkdown')
 
 const mock = {
+        name: "seb",
         title: 'Roick and roll',
         description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
         installation: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
@@ -160,18 +161,23 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFile(path.join(process.cwd(),fileName),data);
+    return fs.writeFile(path.join(process.cwd(),"dist",fileName+ ".md"), data, err =>{
+        if(err){
+            console.log("error happened:", err)}
+    });
+
 }   
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
     .then(responses => {
-        console.log(responses)
+        console.log(mock)
         return generateMarkdown(mock);
     })
     .then(fileData => {
         console.log(fileData)
+        writeToFile("README",fileData)
     })
 }
 
