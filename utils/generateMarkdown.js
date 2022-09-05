@@ -61,7 +61,11 @@ function renderLicenseSection(license) {
     return `
   ## License
   This project uses the following Licence:
-  ${license} ${renderLicenseBadge(license)}${renderLicenseLink(license)}
+
+
+  ${license}
+  
+  ${renderLicenseBadge(license)}${renderLicenseLink(license)}
 
     `
   }

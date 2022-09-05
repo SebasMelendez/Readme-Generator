@@ -1,18 +1,14 @@
 
-  # Roick and roll
+  # Readme-Generator
 
   ## Description
 
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  This tool will ask you a series of questions and use them to generate a README file for any of your projects!
   
   ### made with:
   
 * JavaScript
-* HTML
-* CSS
 * ES6
-* jQuery
-* Bootstrap
 * Node
 * Love <3
 
@@ -29,24 +25,28 @@
 
 
   ## Installation
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  Currently the best way to install it is by cloning my repo and then running 'npm install' to install all dependencies. Node.js is, of course, required too...
   
   ## Usage
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  It will take the answers to promts given by inquirer and will them use the data to generate a README.md file
    
 
   ## License
   This project uses the following Licence:
-  MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+  MIT
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
     
   
 
   ## Contributing
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  This project will not accept any contributions at the moment since it is a Proof of concept made to leverage my experience with node.js
 
   ## Tests
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  Testing is at the moment, reserved for the developer only (me) but making sure a file is generated correctly will make do as a happy path test.
 
   ## Questions
   Contact me at:
@@ -55,7 +55,7 @@
   [My Github](https://github.com/SebasMelendez)
 
 
-  My email: samm1497@hotmail.com
+  My email: sebastian.melendezm@outlook.com
 
-  Made by seb
+  Made by Sebastian Melendez
 

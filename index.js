@@ -164,6 +164,9 @@ function writeToFile(fileName, data) {
     return fs.writeFile(path.join(process.cwd(),"dist",fileName+ ".md"), data, err =>{
         if(err){
             console.log("error happened:", err)}
+        else{
+            console.log("File Written!")
+        }
     });
 
 }   
@@ -172,11 +175,9 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(responses => {
-        console.log(mock)
-        return generateMarkdown(mock);
+        return generateMarkdown(responses);
     })
     .then(fileData => {
-        console.log(fileData)
         writeToFile("README",fileData)
     })
 }
