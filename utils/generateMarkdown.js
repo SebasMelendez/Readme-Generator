@@ -75,18 +75,18 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
+# ${data.title}
 
-  ## Description
+## Description
 
   ${data.description}
   
-  ### made with:
+### Made with:
   ${"\n" + "* " + data.languages.join('\n* ')}
 * Love <3
 
 
-  ## Table of Contents
+## Table of Contents
 * [Description](#description)
 * [Contents](#contents)
 * [Installation](#installation) 
@@ -97,22 +97,22 @@ function generateMarkdown(data) {
 * [Questions](#questions)
 
 
-  ## Installation
+## Installation
   ${data.installation}
   
-  ## Usage
+## Usage
   ${data.usage}
    
 ${renderLicenseSection(data.license)}
   
 
-  ## Contributing
+## Contributing
   ${data.contribution}
 
-  ## Tests
+## Tests
   ${data.testing}
 
-  ## Questions
+## Questions
   Contact me at:
 
 
@@ -121,7 +121,7 @@ ${renderLicenseSection(data.license)}
 
   My email: ${data.email}
 
-  Made by ${data.name}
+Made by ${data.name}
 
 `;
 }

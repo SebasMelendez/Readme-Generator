@@ -1,7 +1,7 @@
 
-  # Readme-Generator
+# Readme-Generator
 
-  ## Description
+## Description
 
   This tool will ask you a series of questions and use them to generate a README file for any of your projects!
 
@@ -10,7 +10,7 @@
 * [Video Demo](https://sebasmelendez.github.io/Weather-Dashboard/)
 * [Project Repo](https://github.com/SebasMelendez/Readme-Generator)
   
-  ### made with:
+### Made with:
   
 * JavaScript
 * ES6
@@ -18,7 +18,7 @@
 * Love <3
 
 
-  ## Table of Contents
+## Table of Contents
 * [Description](#description)
 * [Contents](#contents)
 * [Installation](#installation) 
@@ -29,14 +29,14 @@
 * [Questions](#questions)
 
 
-  ## Installation
+## Installation
   Currently the best way to install it is by cloning my repo and then running 'npm install' to install all dependencies. Node.js is, of course, required too...
   
-  ## Usage
+## Usage
   It will take the answers to promts given by inquirer and will them use the data to generate a README.md file
    
 
-  ## License
+## License
   This project uses the following Licence:
 
 
@@ -47,13 +47,13 @@
     
   
 
-  ## Contributing
+## Contributing
   This project will not accept any contributions at the moment since it is a Proof of concept made to leverage my experience with node.js
 
-  ## Tests
+## Tests
   Testing is at the moment, reserved for the developer only (me) but making sure a file is generated correctly will make do as a happy path test.
 
-  ## Questions
+## Questions
   Contact me at:
 
 
@@ -64,5 +64,5 @@
 
 
 
-  Made by Sebastian Melendez
+Made by Sebastian Melendez
 
