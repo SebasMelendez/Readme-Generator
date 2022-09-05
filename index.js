@@ -175,7 +175,6 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(responses => {
-      console.log(responses)
         return generateMarkdown(responses);
     })
     .then(fileData => {
