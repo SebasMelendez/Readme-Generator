@@ -1,19 +1,23 @@
 
-  # Readme-Generator
+# Quantum-Calculator
 
-  ## Description
+## Description
 
-  This tool will ask you a series of questions and use them to generate a README file for any of your projects!
+  This calculator will help you make calculations on quantum particles
   
-  ### made with:
+### Made with:
   
 * JavaScript
+* HTML
+* CSS
 * ES6
+* jQuery
+* Bootstrap
 * Node
 * Love <3
 
 
-  ## Table of Contents
+## Table of Contents
 * [Description](#description)
 * [Contents](#contents)
 * [Installation](#installation) 
@@ -24,11 +28,11 @@
 * [Questions](#questions)
 
 
-  ## Installation
-  Currently the best way to install it is by cloning my repo and then running 'npm install' to install all dependencies. Node.js is, of course, required too...
+## Installation
+  npm install quantumCalc
   
-  ## Usage
-  It will take the answers to promts given by inquirer and will them use the data to generate a README.md file
+## Usage
+  this will do some crazy programming magic
    
 
   ## License
@@ -42,20 +46,20 @@
     
   
 
-  ## Contributing
-  This project will not accept any contributions at the moment since it is a Proof of concept made to leverage my experience with node.js
+## Contributing
+  make sure you improve the project
 
-  ## Tests
-  Testing is at the moment, reserved for the developer only (me) but making sure a file is generated correctly will make do as a happy path test.
+## Tests
+  make sure it works!
 
-  ## Questions
+## Questions
   Contact me at:
 
 
   [My Github](https://github.com/SebasMelendez)
 
 
-  My email: sebastian.melendezm@outlook.com
+  My email: quantum@yxs.com
 
-  Made by Sebastian Melendez
+Made by Melendev
 

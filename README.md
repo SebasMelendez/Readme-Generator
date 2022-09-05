@@ -7,7 +7,7 @@
 
   ![Product Name Screen Shot](./assets/Screenshot.jpg)
 
-* [Video Demo](https://sebasmelendez.github.io/Weather-Dashboard/)
+* [Video Demo](https://streamable.com/7enly0)
 * [Project Repo](https://github.com/SebasMelendez/Readme-Generator)
   
 ### Made with:
