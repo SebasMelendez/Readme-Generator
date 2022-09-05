@@ -4,16 +4,16 @@ function renderLicenseBadge(license) {
   switch(license){
     // ["MIT", "APACHE2.0", "Boost1.0", "CC01.0", "none"],
     case "MIT":
-      return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
     break
     case "APACHE2.0":
-      return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
     break
-    case "BNoost1.0":
-      return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)(https://www.boost.org/LICENSE_1_0.txt)`
+    case "Boost1.0":
+      return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
     break
     case "CC01.0":
-      return `![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)(http://creativecommons.org/publicdomain/zero/1.0/)`
+      return `[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)]`
     break
     case "none":
       return ``
@@ -42,7 +42,7 @@ function renderLicenseLink(license) {
       return `(https://www.boost.org/LICENSE_1_0.txt)`
     break
     case "CC01.0":
-      return `!(http://creativecommons.org/publicdomain/zero/1.0/)`
+      return `(http://creativecommons.org/publicdomain/zero/1.0/)`
     break
     case "none":
       return ``
@@ -61,7 +61,8 @@ function renderLicenseSection(license) {
     return `
   ## License
   This project uses the following Licence:
-  ${license} [${renderLicenseBadge(license)}]${renderLicenseLink(license)}
+  ${license} ${renderLicenseBadge(license)}${renderLicenseLink(license)}
+
     `
   }
 
