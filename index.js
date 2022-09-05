@@ -4,10 +4,34 @@ const inquirer = require('inquirer');
 const path = require("path");
 const generateMarkdown = require('./utils/generateMarkdown')
 
-
+const mock = {
+        title: 'Roick and roll',
+        description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        installation: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        usage: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        contribution: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        license: 'MIT',
+        testing: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        github: 'SebasMelendez',
+        email: 'samm1497@hotmail.com',
+        languages: [ 'JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node' ]
+}
 
 // TODO: Create an array of questions for user input
 const questions = [
+    {
+        type: "input",
+        name: "name",
+        message: "What is your name ?",
+        validate: devName => {
+            if (devName) {
+              return true;
+            } else {
+              console.log('You need to enter your name!');
+              return false;
+            }
+          }
+    },
     {
         type: "input",
         name: "title",
@@ -37,28 +61,60 @@ const questions = [
     {
         type:"input",
         name:"installation",
-        message:"What are the steps to install the project?"       
+        message:"What are the steps to install the project?",
+        validate: installInput => {
+            if (installInput) {
+              return true;
+            } else {
+              console.log('You need to enter steps to install!');
+              return false;
+            }
+          }       
     },
     {
         type:"input",
         name:"usage",
-        message:"How will this project work?"
+        message:"How will this project work?",
+        validate: usageInput => {
+            if (usageInput) {
+              return true;
+            } else {
+              console.log('You need to enter usage Information');
+              return false;
+            }
+          }
     },
     {
         type:"input",
-        name:"Contribution Guidelines",
-        message:"What are the contribution Guidelines?"
+        name:"contribution",
+        message:"What are the contribution Guidelines?",
+        validate: contributionInput => {
+            if (contributionInput) {
+              return true;
+            } else {
+              console.log('You need to enter Contribution Guidelines!');
+              return false;
+            }
+          }
     },
     {
         type: "list",
         name: "license",
         message: "What licence will you be using?",
-        choices: ["MIT", "Private", "none"],
+        choices: ["MIT", "APACHE2.0", "Boost1.0", "CC01.0", "none"],
     },
     {
         type:"input",
         name:"testing",
-        message:"What are the test instructions?"
+        message:"What are the test instructions?",
+        validate: testingInput => {
+            if (testingInput) {
+              return true;
+            } else {
+              console.log('You need to enter testing guidelines!');
+              return false;
+            }
+          }
     },
     {
         type:"input",
@@ -76,13 +132,29 @@ const questions = [
     {
         type:"input",
         name:"email",
-        message:"What is your email?"
+        message:"What is your email?",
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('You need to enter your email!');
+              return false;
+            }
+          }
     },
     {
         type: 'checkbox',
         name: 'languages',
         message: 'What did you this project with? (Check all that apply)',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node',"Other"],
+        validate: languagesInput => {
+            if (languagesInput.length > 0) {
+              return true;
+            } else {
+              console.log('Select at least one!');
+              return false;
+            }
+          }
       },
 ];
 
@@ -96,7 +168,7 @@ function init() {
     inquirer.prompt(questions)
     .then(responses => {
         console.log(responses)
-        return generateMarkdown(responses);
+        return generateMarkdown(mock);
     })
     .then(fileData => {
         console.log(fileData)
