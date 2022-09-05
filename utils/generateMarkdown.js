@@ -61,7 +61,7 @@ function renderLicenseSection(license) {
     return `
   ## License
   This project uses the following Licence:
-  ${license} ${renderLicenseBadge(license)}${renderLicenseLink(license)}
+  ${license} [${renderLicenseBadge(license)}]${renderLicenseLink(license)}
     `
   }
 
@@ -109,8 +109,12 @@ ${renderLicenseSection(data.license)}
 
   ## Questions
   Contact me at:
+
+
   [My Github](https://github.com/${data.github})
-  ${data.email}
+
+
+  My email: ${data.email}
 
   Made by ${data.name}
 

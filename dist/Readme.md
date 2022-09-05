@@ -37,7 +37,7 @@
 
   ## License
   This project uses the following Licence:
-  MIT ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)(https://opensource.org/licenses/MIT)
+  MIT [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/MIT)
     
   
 
@@ -49,8 +49,12 @@
 
   ## Questions
   Contact me at:
+
+
   [My Github](https://github.com/SebasMelendez)
-  samm1497@hotmail.com
+
+
+  My email: samm1497@hotmail.com
 
   Made by seb
 
